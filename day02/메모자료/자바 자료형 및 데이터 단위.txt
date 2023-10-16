@@ -1,0 +1,22 @@
+	자바
+
+  - 변수	(자료형) 	- primitive
+
+  - 상수	 	- reference
+
+  - 데이터 배치
+ 
+  - 연산
+
+  - 결과 확인
+
+  - 화면 출력 / 파일 저장
+
+데이터의 단위
+
+bit(Binary Digit) : 1 0 으로만 이루어져있다
+
+8 bit -> 1 byte
+1024 byte -> 1 kbyte
+
+  
