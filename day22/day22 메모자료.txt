@@ -1,0 +1,19 @@
+table은 row와 column으로 구성되어있다
+column은 데이터의 각 속성을 나타내고
+row는 여러 데이터의 순번으 나타낸다
+
+
+		반환형	매개변수자료형	DDL종류		?사용여부		실행함수
+selectList 	list	     x          select               x	 	query()
+ 
+insertBook  	int 	  BookDTO       insert               o		update()
+	
+deleteBook 	int	  String        delete               o		upadate
+
+=> select는 executeQuery()로 실행하고, ResultSet으로 결과를 받는다
+
+=> 그외, insert/update/delete는 executeUpdate()로 실행하고, int로 결과를 받는다
+
+=> 매개변수가 없으면 ?도 사용하지 않는다
+
+=> 매개변수가 있으면 ?에 순서대로 값을 넣어주면 된다
