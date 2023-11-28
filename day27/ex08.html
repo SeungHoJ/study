@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08.html</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        table{
+            border-collapse: collapse;
+            margin: auto;
+        }
+        td{
+            background-color: #EE68A2;
+            border: 1px solid #dddddd
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+        }
+        td.hidden{
+            background-color: white;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="color">
+    <table id="pork">
+        <tr>
+            <td rowspan="3"><a href="">돼지머리</a></td>
+            <td><a href="">목살</a></td>
+            <td rowspan="2"><a href="">가브리살</a></td>
+            <td rowspan="2"><a href="">등심</a></td>
+            <td rowspan="4"><a href="">뒷다리살</a></td>
+        </tr>
+        <tr>
+            <td><a href="">항정살</a></td>
+        </tr>
+        <tr>
+            
+            <td><a href="">갈비</a></td>
+            <td><a href="">갈매기살</a></td>
+            <td><a href="">안심</a></td>
+            
+        </tr>
+        <tr>
+            <td class="hidden"></td>
+            <td><a href="">앞다리살</a></td>
+            <td colspan="2"><a href="">삼겹살</a></td>
+            
+            
+        </tr>
+        <tr>
+            <td class="hidden"></td>
+            <td><a href="">돈족</a></td>
+            <td class="hidden"></td>
+            <td class="hidden"></td>
+            <td><a href="">돈족</a></td>
+        </tr>
+    </table>
+</body>
+</html>
