@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04.html</title>
+    <style>
+        div.header{
+            border: 1px dashed red;
+            width: 900px;
+            height: 200px;
+            margin: 0 auto;
+
+        }
+        div.nav{
+            width: 450px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        div.menu{
+            display: inline-block;
+            width: 80px;
+            height: 35px;
+            background-color: aquamarine;
+            text-align: center;
+            padding: 1px;
+        }
+        div.main{
+            border: 1px dashed blue;
+            width: 900px;
+            margin: auto;
+        }
+        div.left{
+            display: inline-block;
+            height: 95;
+            width: 200px;
+            background-color: burlywood;
+            padding: 20px;
+            position: relative;
+            top: -220px;
+        }
+        div.left > ul{
+            list-style: none;
+            padding-left: 0;
+        }
+        div.left > ul > li{
+            margin: 10px auto;
+            width: 100px;
+        }
+        div.right{
+            display: inline-block;
+            width: 500px;
+            padding: 2px;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        h1{
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            <h1><a href="#">LOGO</a></h1>
+        </div>
+        <div class="nav">
+            <div class="menu">menu1</div>
+            <div class="menu">menu2</div>
+            <div class="menu">menu3</div>
+            <div class="menu">menu4</div>
+            <div class="menu">menu5</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <ul>
+                <li><a href="#">sub-menu1</a></li>
+                <li><a href="#">sub-menu2</a></li>
+                <li><a href="#">sub-menu3</a></li>
+                <li><a href="#">sub-menu4</a></li>
+                <li><a href="#">sub-menu5</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="section">
+                <img src="../day26/짱구/짱구.png" width="100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestiae tempora inventore consequatur saepe repellendus nulla, nisi veritatis, nam, similique quos impedit. Quasi libero hic praesentium iusto ad vel magnam.
+            </div>
+            <div class="section">
+                <img src="../day26/짱구/유리.png" width="100">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt soluta, asperiores blanditiis reiciendis in doloremque autem neque commodi itaque illo, mollitia, fuga iure tempora aspernatur voluptatem laboriosam? Architecto, voluptatum reiciendis!
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

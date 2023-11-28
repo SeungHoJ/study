@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1.html</title>
+    <style>
+        body{
+            width: 900px;
+        }
+        div.top{
+
+            display: flex; justify-content: space-between;
+            
+            height: 40px;
+            width: 100%;
+            margin: 1px auto;
+        }
+        div.logo{
+            display: flex;
+            font-weight: bold;
+            cursor: pointer;
+            color: #03c75a;
+            
+            height: 40px;
+            font-size: 20px;
+        }
+        div.toplist > ul{
+            
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            height: 40px;
+            
+        }
+        ul > li{
+            margin: 0;
+            padding: 3px ;
+            padding-top: 0;
+        }
+        div.img > img{
+            width: 100%
+            
+        }
+        div.bottom{
+            display: flex;
+            padding: 0;
+
+        }
+        div.bottom > ul{
+            display: flex;
+            list-style: none;
+            border: 1px solid darkgrey;
+            height: 40px;
+            width: 100%;
+            margin-right: 25px;
+            padding: 10px 25px 10px 10px;
+            overflow: hidden; /* 영역을 벗어나는 내용은 숨긴다*/
+        }
+        div.bottom > ul > li:hover{
+            cursor: pointer;
+            border-top: 1px solid black;
+        
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>quiz1</h1>
+    <hr>
+
+    <div class="top">
+        <div class="logo">NAVER</div>
+        <div class="toplist">
+            <ul>
+                <li>카페홈</li>
+                <li>|</li>
+                <li>이웃</li>
+                <li>|</li>
+                <li> 
+                    <select style="border: 0;">
+                        <option>가입카페</option>
+                    </select>
+                </li>
+                <li>|</li>
+                <li>새글</li>
+                <li>|</li>
+                <li>내소식</li>
+                <li>|</li>
+                <li>채팅</li>
+                <li>|</li>
+                <li><button>로그인</button></li>
+                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAATlBMVEUAAAD///8YGBgJCQnu7u74+Pj19fXn5+ewsLCHh4dOTk41NTWgoKDa2tohISGXl5cQEBBHR0ccHBzExMQ+Pj5tbW0oKCji4uJzc3NERERscpE1AAADI0lEQVR4nO2di5KiMBREUdnwkucwD///RxfHEhWiO7VD6lZ3+nzBPQWEkNw0yW5Blhdl0yWIdE1Z5NlSKHnUayvrMn9N1WZPDV1hXd1GFM5veLQubEOOHsO0t65qU/p0aVgP1jVtzFA/Gr5ZFxSAt3vD2rqaINQ3w5TtFr0wpLMh1yBzo78aMr0mHjleDJ11HQFx34YsMxkfxdkws64iKNlk2FoXEZR2MsT/mnhFtUu4b9LpNk1y6xICkyfMI+mZIimtSwhMmTTWJQSmSTAXnX4Ou98ZdscugueQfyzlfx/yz2n456X83xYRfB9y36ZZFOs0Eay18a+X7najdSWBGOdVfcc5OW1cRHtPEewfTlfxYF3QxhwWe8DTs8i1xVbO7Rj3vRg8l/Hg68U4bwWzzG6KdOc3nBzbvXV1v2bfpg9Oj4bnISd/L6uPYY/H8FGV73m9FFoZXoadFBHndfEbMiFDfGSIjwzxkSE+MsRHhvjIEB8Z4iNDfGSIjwzxkSE+MsRHhvjIEB8Z4iNDfGSIjwzxkSE+MsTnieEfRH5o+Jl/jUN3QKQbxq/887VhRtFf+jxzj75HmL3POz1Zl7Upp3XmHtu5/E6ZewzcZ+7hvyN87G+Ze1yDzI3T1ZD+DCn/OWCWmYwPZe4RoMw9ApS5h48y9/BR5h4D7I7K3MNHmXv4KHMPHmXu4aPMPXjiydyjX/OOYN+Cf+8pgv1Dwj3g/Spzj20fX5l72LzI3GPvifqGvK9txrrN8L/wq0TbX0qEDPGRIT4yxEeG+MgQHxniI0N8ZIiPDPGRIT4yxEeG+MgQHxniI0N8ZIiPDPGRIT4yxEeG+MRqSP0vWfL/AbP/05m+R5i9z9v11mVtSr/q1a95LuCFgzL3GLg79+Q4gxUaNxuO1rUEYrwa0p8h5T8HzDKT8aHMPQKUuUeAMvfwUeYePsrcY4DdUZl7+ChzDx9l7sGjzD18lLkHTzyZe1wbazf6eVU/HaxrCcKgzD10lpl7bDfqsM7c4xpu+tW/88heGk8y9xzL7Ka47/9aZu7hf2lU/8rcy/KibDCXp7qmLPJsKfQXCNF2pOXgmyoAAAAASUVORK5CYII="; width="10"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="img">
+        <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMzA4MThfMjcy/MDAxNjkyMzMzODEyOTIz.vFH50d_VJS1dyq7AEQGjdwSzaE8rF3_hkZqhuEeuh1gg.1wLYJTbPMZsStALjmPmhyont_bL5I9Vyo_r7j4oJb2Ug.JPEG/%EC%BA%A0%ED%95%91%ED%8D%BC%EC%8A%A4%ED%8A%B8%EB%8C%80%EB%AC%B8.jpg" >
+    </div>
+    <div class="bottom">
+        <ul>
+            <li>전체글보기</li>
+            <li>·</li>
+            <li>인기글</li>
+            <li>·</li>
+            <li>이미지모아보기</li>
+            <li>·</li>
+            <li>카페태그보기</li>
+            <li>·</li>
+            <li>초캠 명예의 전당</li>
+        </ul>
+    </div>
+</body>
+</html>
