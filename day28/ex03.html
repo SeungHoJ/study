@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+</head>
+<body>
+    
+    <h1>네이버 뉴스 카테고리 검색</h1>
+    <hr>
+    
+    <form action="https://news.naver.com/main/main.naver">
+        <input type="hidden" name="mode" value="LSD" disabled>
+        <!-- disabled는 값 자체를 비활성화하여 제출시 값을 포함하지 않는다 -->
+        <input type="hidden" name="mid" value="shm" readonly>
+        <!-- readonly는 값을 고정하여 제출시 값을 포함한다 -->
+        <!-- hidden은 자리차지 하지 않는다 -->
+        <!-- <input type="text" name="sid1" placeholder="101~105"> -->
+        <select name="sid1">
+            <option value="101">경제</option>
+            <option value="102">사회</option>
+            <option value="103">생활/문화</option>
+            <option value="104">세계</option>
+            <option value="105">IT/과학</option>
+            <option value="100">정치</option>
+        </select>
+        <input type="submit" value="검색">
+    </form>
+
+</body>
+</html>
