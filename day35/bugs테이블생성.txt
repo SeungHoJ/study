@@ -1,0 +1,23 @@
+drop sequence bugs_seq;
+drop table bugs purge;
+
+create sequence bugs_seq
+	start with 1
+	maxvalue 99999
+	increment by 1
+	nocycle
+	nocache;
+
+create table bugs(
+	id		number		default bugs_seq.nextval primary key,
+	artist_name	varchar2(500)	not null,
+	artist_img	varchar2(500)	not null,
+	album_name	varchar2(500)	not null,
+	album_img	varchar2(500)	not null,
+	name		varchar2(500)	not null,
+	genre		varchar2(500)	not null,
+	playTime	number		default 0 check(playTime >= 0),
+	lyrics		varchar2(4000)	not null,
+	isTitle		number		default 0 check(isTitle in(1,0))
+);
+	
