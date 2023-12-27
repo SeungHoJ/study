@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul,ol{
+            list-style: none;
+
+        }
+        body{
+            margin: 0;
+            color: #535353;
+        }
+        header{
+            width: 100%;
+            top: 0;
+            position: fixed;
+            background-color: white;
+            border: 1px solid #f1ecec;
+        }
+       
+        section{
+            padding: 30px 0;
+        }
+        .inner{
+            max-width: 1170px;
+            margin: auto;
+            
+        }
+        div.top{
+            display: flex;
+
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+        }
+        .logo  img{
+            width: 250px;
+            height: 50px;
+        }
+        .flex{
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .login{
+            display: flex;
+            justify-content: space-between;
+            border-left: 1px solid #f1ecec;
+            border-right: 1px solid #f1ecec;
+        }
+        .right-login > a{
+            font-size: 12px;
+            color: #535353;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .left-login {
+            padding: 5px;
+        }
+        .left-login > a{
+            display: flex;
+            align-items: center;
+        }
+        .left-login img{
+            margin-right: 5px;
+        }
+        .right-login > a:hover{
+            background-color: #f6f6f6;
+            color: aquamarine;
+        }
+        input{
+            width: 120px;
+            margin: 10px;
+        }
+        .nav{
+            width: 920px;
+        }
+        .rel{
+            position: relative;
+        }
+        .list > ul{
+            padding: 0;
+            margin: 0;
+            width: 921px;
+            font-size: 13px;
+            color: #535353;
+        }
+        .list > ul > li{
+            display: flex;
+            height: 50px;
+            flex: 1;
+            text-align: center;
+            justify-content: center;
+            border-left: 1px solid #f1ecec;
+            border-top: 1px solid #f1ecec;
+        }
+        .list > ul > li >ol{
+            width: 150px;
+            position: absolute;
+            padding: 0;
+            background-color: rgb(32, 31, 31);
+            color: #7a7a7a;
+        }
+        .list > ul > li:hover{
+            background-color: #f6f6f6;
+
+            
+        }
+        .list > ul > li:hover > a{
+            color: aquamarine;
+        }
+        .list > ul > li:hover > ol{
+            display: block;
+        }
+        .list ol > li{
+            padding: 10px 20px 10px 10px;
+            border-bottom: #7a7a7a;
+            cursor: pointer;
+            width: 120px;
+            
+
+        }
+        .list ol > li:hover{
+            background-color: black;
+            color: white;
+        }
+        
+
+        .drop1{
+            top:52px;
+            left: 103px;
+            display: none;
+        }
+        .drop2{
+            top:52px;
+            left: 205px;
+            display: none;
+        }
+        .drop3{
+            top:52px;
+            left: 307px;
+            display: none;
+        }
+        .drop4{
+            top:52px;
+            left: 409px;
+            display: none;
+        }
+        .drop5{
+            top:52px;
+            left: 511px;
+            display: none;
+        }
+        .drop6{
+            top:52px;
+            left: 613px;
+            display: none;
+        }
+        .drop7{
+            top:52px;
+            left: 716px;
+            display: none;
+        }
+
+
+        .list > ul > li:last-child{
+            border-right: 1px solid #f1ecec;
+        }
+        .list > ul > li > a{
+            display: flex;
+            align-items: center;
+        }
+        .first-sec{
+            background-image:url('http://playwares.com/files/thumbnails/226/017/058/1150x400.crop.jpg');
+            background-repeat: no-repeat;
+            background-position: center left;
+            height: 400px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            margin-top: 100px;
+        }
+        .move-wrap{
+            height: 60px;
+            width: 1170px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .move{
+            display: flex;
+            justify-content: flex-end;
+            height: 60px;
+            width: 480px;
+            background-color: #f6f6f6;
+        }
+        .left-arrow,.right-arrow{
+            width: 60px;
+            height: 60px;
+            background-color: #008bce;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            margin: 0px 0px 0px 3px;
+            cursor: pointer;
+
+        }
+        .left-arrow:hover,.right-arrow:hover{
+            opacity: 0.8;
+        }
+        .view{
+            width: 770px;
+            height: 230px;
+            display: flex;
+            border: 1px solid #c7c7c7;
+        }
+        .info{
+            padding: 10px;
+        }
+        .view img,.view .view{
+            flex: 1;
+        }
+        
+        .view .info:hover >a{
+            color: #1c99d1;
+        }
+        .second-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+        .event{
+            width: 370px;
+        }
+        .event .top{
+            height: 46px;
+            width: 370px;
+
+        }
+        .left,.right{
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .left{
+            background-color: #ffe400;
+        }
+        .right{
+            color: white;
+            background-color: #d7d7d7;
+        }
+        .left > div,.right > div{
+            padding: 13px 15px;
+        }
+        .event-list ul{
+            padding: 0;
+            margin: 10px;
+        }
+        .event-list li{
+            font-size: 13px;
+            color: #535353;
+            padding: 5px 0;
+            margin: 0;
+            border-bottom: 1px solid #d7d7d7;
+            display: flex;
+            justify-content: space-between;
+        }
+        .event-list li >a:hover{
+            color: rgb(2, 135, 145);
+        }
+        .event-list li:last-child{
+            border-bottom: 1px solid white;
+        }
+        .third-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+        .fourth-sec .right{
+            background-color: white;
+
+        }
+        .fourth-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+        .fifth-sec{
+            display: flex;
+            justify-content: space-between;   
+            
+        }.last-sec{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box-view{
+            display: flex;
+            justify-content: center;
+        }
+        footer{
+            background-color: #313131;
+            padding: 20px 0 50px;
+            color: #7a7a7a;
+            margin-top: 40px;
+            font-size: 13px;
+            
+        }
+        .footer1 h3{
+            font-size: 25px;
+            color: #fcfcfc;
+            margin: 15px 0;
+        }
+        .footer2 h3{
+            font-size: 16px;
+            color: #c7c7c7;
+        }
+        .footer3 h3{
+            font-size: 16px;
+            color: #c7c7c7;
+        }
+        footer span{
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+            padding-bottom: 7px;
+            color: aquamarine;
+        }
+        .footer{
+            padding-right: 10px;
+        }
+        .footer1{
+            margin-right: 10px;
+        }
+        .footer2{
+            margin-right: 10px;
+            width: 287px;
+        }
+        .footer3{
+            margin-right: 10px;
+            width: 287px;
+        }
+        .footer2 > div,.footer3 > div{
+            border-bottom: 1px solid #7a7a7a;
+        }
+        .remote{
+            position: fixed;
+            top: 110px;
+            right: 170px;
+        } 
+        .remote > div{
+            width: 70px;
+            height: 70px;
+            border-top: 1px solid #666666;
+            border-left: 1px solid #666666;
+            border-right: 1px solid #666666;
+            color: #666666;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .remote > div:hover{
+            color: #1c99d1;
+        }
+        .remote > div:last-child{
+            border-bottom: 1px solid #666666;
+
+        }
+
+       
+          
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="top inner">
+        <div class="logo">
+            <a href=""><img src="http://playwares.com/files/attach/images/47072089/394d7276706dc24075e17bfd03f4ef9e.png"></a>
+        </div>
+        <div class="nav">
+            <div class="login">
+                <div class="left-login flex">
+                    <a href=""><img src="http://playwares.com/layouts/layout_bucket_list/images/link_facebook.png"></a>
+                    <a href=""><img src="http://playwares.com/layouts/layout_bucket_list/images/link_naverblog.png"></a>
+                    <a href=""><img src="http://playwares.com/files/attach/images/47072079/2498c8ef2c3b5b1d41f01a121e076f42.png"></a>
+                    <a href=""><img src="http://playwares.com/files/attach/images/47072079/0d00ebcbf66f6c9cca15ce312bbe69aa.png"></a>
+                </div>
+                <div class="right-login flex">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                    <input type="text" name="" id="" placeholder="검색">
+                </div>
+            </div>
+            <div class="list rel">
+                <ul class="flex">
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">
+                        공지▾</a>
+                        <ol class="drop1">
+                            <li>공지사항</li>
+                            <li>요청/건의</li>
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        메인리뷰▾</a>
+                        <ol class="drop2">
+                            <li>PC</li>
+                            <li>모바일</li>
+                            <li>디스플레이</li>
+                            <li>게임</li>
+                            <li>웹진</li>
+                            <li>DP DB ‣</li>
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        회원리뷰▾</a>
+                        <ol class="drop3">
+                            <li>게임</li>
+                            <li>PC</li>
+                            <li>모바일</li>
+                            <li>디스플레이</li>
+                            <li>기타</li>
+                            <li>필드테스트</li>
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        소식▾</a>
+                        <ol class="drop4">
+                            <li>스폰서</li>
+                            <li>PC</li>
+                            <li>모바일</li>
+                            <li>디스플레이</li>
+                            <li>게임</li>
+                            <li>좋은정보</li>
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        게임▾</a>
+                        <ol class="drop5">
+                            <li>게임게시판</li>
+                            <li>게임갤러리</li>
+                            <li>회원게임리뷰</li>
+                            <li>게임할인정보</li>
+                            <li>게임자료실</li>
+                            <li>게임평점</li>
+                            <li>게임번역정보</li>
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        커뮤니티▾</a>
+                        <ol class="drop6">
+                            <li>자유게시판</li>
+                            <li>자유갤러리</li>
+                            <li>플웨즈자료실</li>
+                            <li>A/S평점</li>
+                            
+                        </ol>
+                    </li>
+                    <li><a href="">
+                        장터▾</a>
+                        <ol class="drop7">
+                            <li>회원장터</li>
+                            <li>방출&기부</li>
+                        </ol>
+                    </li>
+                    <li><a href="">특가</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<section class="first-sec inner">
+    <div class="move-wrap">
+        <div class="move flex">
+            <div class="left-arrow"><</div>
+            <div class="right-arrow">></div>
+        </div>
+    </div>
+    <div class="remote">
+        <div>로그인</div>
+        <div>회원가입</div>
+        <div>ID/PASS찾기</div>
+    </div>
+</section>
+<section class="second-sec inner">
+    <div class="view">
+        <div class="img">
+            <a href=""><img src="http://playwares.com/files/thumbnails/067/495/058/383x230.crop.jpg"></a>
+        </div>
+        <div class="info">
+            <a href="" style="font-size: 13px;"><h4 style="color: #1c99d1;">MSI G274F IPS 게이밍 180 아이케어 HDR 무결점</h4>
+            MSI의 모니터 카테고리에는 글로벌 게이밍 모니터 시장에 대응하기 위한 다수의 제품이 포함되어 있습니다. 대표적으로 MAG,MPG,G 시리즈를 꼽을 수 있죠. 특히 G 시리즈에는 가격</a></div>
+    </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>이벤트 & 특가</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="right">
+                <div>플웨즈 공지</div>
+                <div class="plus">+</div>
+            </div>
+        </div>
+        <div class="event-list">
+            <ul style="font-weight: bold;">
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-13</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-26</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-27</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-30</span></li>
+            </ul>
+           
+        </div>
+    </div>
+</section>
+
+<section class="third-sec inner flex">
+    <div class="img"><a href=""><img src="http://playwares.com/files/attach/images/47072103/870/459/057/c7e85095371763c2aa97b636f6cf9987.jpg"></a></div>
+    <div class="img"><a href=""><img src="http://playwares.com/files/attach/images/47072103/900/112/058/4b7378cdf04e49a8db6ec4d100b26f5d.jpg"></a></div>
+    <div class="img"><a href=""><img src="http://playwares.com/files/attach/images/47072103/054/994/057/6b289f6c35b7da15cb670e5f11dae4a9.jpg"></a></div>
+</section>   
+
+<section class="fourth-sec inner flex">
+    <div class="view">
+        <div class="info">
+            <a href="" style="font-size: 13px;"><h4 style="color: #535353;">앱코, G30 트루포스 그래픽 카드 지지대 무료 지원!</h4>
+                앱코, G30 트루포스 그래픽 카드 지지대 무료 지원! 삶의 새로운 패러다임.‘뉴 라이프 플랫폼(New Life Platform)’을 만들어가는 주식회사 앱코(www.abko.co.kr 대표 오광근)에서 스테</a></div>
+                <div class="img">
+                    <a href=""><img src="http://playwares.com/files/thumbnails/529/573/058/383x230.crop.jpg"></a>
+                </div>
+            </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>H/W 견적</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+</section>
+<section class="fifth-sec inner">
+    
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>H/W게시판</div>
+                <div class="plus">+</div>
+            </div>
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>인기 회원리뷰</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="right">
+                <div>회원리뷰</div>
+                <div class="plus">+</div>
+            </div>
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>H/W갤러리</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="right">
+                <div>자유갤러리</div>
+                <div class="plus">+</div>
+            </div>
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+</section>
+<section class="last-sec inner">
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>게임게시판</div>
+                <div class="plus">+</div>
+            </div>
+            
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>자유게시판</div>
+                <div class="plus">+</div>
+            </div>
+            
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+    <div class="event">
+        <div class="top flex">
+            <div class="left">
+                <div>종합 QnA</div>
+                <div class="plus">+</div>
+            </div>
+            
+        </div>
+        <div class="event-list">
+            <ul>
+                <li><a href="">>WD_BLACK AN1500 SSD 댓글 이벤트</a><span>2020-04-06</span></li>
+                <li><a href="">>씨게이트 바라쿠다 2TB 최저가 맞추기</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a><span>2020-04-06</span></li>
+                <li><a href="">>(재선정)씨게이트 14TB HDD 런칭 기념</a><span>2020-04-06</span></li>
+                <li><a href="">>컬러풀 CN600S SSD 240GB 퀴즈 이벤</a><span>2020-04-06</span></li>
+            </ul>
+           
+        </div>
+    </div>
+</section>
+<div class="box-view inner">
+   
+    <a href=""><img src="http://playwares.com/files/thumbnails/871/626/056/172x85.crop.jpg"></a>
+    <a href=""><img src="http://playwares.com/files/thumbnails/541/194/047/172x85.crop.jpg"></a>
+    <a href=""><img src="http://playwares.com/files/thumbnails/513/194/047/172x85.crop.jpg"></a>
+    <a href=""><img src="http://playwares.com/files/thumbnails/543/194/047/172x85.crop.jpg"></a>
+    <a href=""><img src="http://playwares.com/files/thumbnails/796/250/056/172x85.crop.jpg"></a>
+    <a href=""><img src="http://playwares.com/files/thumbnails/451/194/047/172x85.crop.jpg"></a>
+
+   
+</div>
+
+<footer>
+    <section class="footer inner flex">
+        <div class="footer1">
+            <h3>플레이웨어즈</h3>
+            <p>대표 : 박성진</p>
+            <p>Copyright 2015 PLAYWARES. All rights reserved. </p>
+        </div>
+        <div class="footer2">
+            <div class="flex"><h3>CONTACT US</h3><span>∨</span></div>
+            <p>이메일 : webmaster@playwares.com</p>
+            <p>주소 : 서울시 금천구 가산디지털 1로 STX-V타워 704호</p>
+        </div>
+        <div class="footer3">
+            <div class="flex"><h3>INFORMATION</h3><span>∨</span></div>
+            <p>요청/건의</p>
+            <p>개인정보취급방침</p>
+            <p>광고/제휴 문의</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
